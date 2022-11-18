@@ -1,0 +1,27 @@
+#error1 
+Node Multer unexpected field
+Answers:
+
+The <NAME> you use in multer's upload.single(<NAME>) function must be the same as the one you use in <input type="file" name="<NAME>" ...>.
+
+So you need to change
+
+var type = upload.single('file')
+
+to
+
+var type = upload.single('recfile')
+
+in you app.js
+
+href="/deleteimage/{{this._id}}" path me dynamic aise use karo only "" to complet line
+
+#mongodb connection error 
+connect ECONNREFUSED 127.0.0.1:27017
+Answers:
+This happened probably because the MongoDB service isn't started. Follow the below steps to start it:
+
+Go to Control Panel and click on Administrative Tools.
+Double click on Services. A new window opens up.
+Search MongoDB.exe. Right click on it and select Start.
+The server will start. Now execute npm start again and the code might work this time

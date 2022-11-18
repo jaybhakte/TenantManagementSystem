@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading</title>
+    <!-- Bootstrap CSS & icon file-->
+    {{>iconImage}}
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/file-upload-with-preview/dist/file-upload-with-preview.min.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        {{>navbar}}
+        <div class="row">
+            <div class="col-sm-8 mt-3">
+                <h4>Upload your reading photos</h4>
+
+                <form class="mt-4" action="/upload" method="POST" enctype="multipart/form-data">
+                    <div class="form-group ">
+                        <label class="form-label" for="name">Room Number</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter Room Number.." value="" name="name"
+                            required>
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label" for="desc">Name and Clicked Date</label>
+                        <input type="text" id="desc" name="desc" class="form-control" value=""  placeholder="FirstName_SureName_DD/MM/YY"
+                            required>
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label" for="image">Upload Image</label>
+                        <input type="file" id="image" class="form-control" name="image" value="" required>
+                    </div>
+                    <div>
+                        <button type="submit" class="mt-2 btn btn-primary">Submit</button>
+                    <a class="mt-2 btn btn-primary" href="/uploadlist">See Previous Images</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{>footer}}
+    </div>
+</body>
+{{!-- file upload preview js --}}
+{{!-- <script src="https://unpkg.com/file-upload-with-preview/dist/file-upload-with-preview.iife.js"></script> --}}
+{{!-- bootsrtrap js --}}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</html>

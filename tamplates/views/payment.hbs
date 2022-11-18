@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    {{>iconImage}}
+</head>
+
+<body>
+    <div class="container">
+        {{>navbar}}
+        <div class="row">
+            <div class="col-4">
+                {{!-- <a href="/register" type="submit" class="btn btn-primary">Book</a> --}}
+            </div>
+            <div class="col">
+                <p class="h3 mt-2 text-center">Hey Roomys Scan this and Pay...!</p>
+                <img src="img/qrcode.jpeg" style="height: 70%;width:70%;" class="mt-3 img img-fluid" alt="">
+            </div>
+            <div class="col-2">
+                {{!-- <a href="/" class="btn btn-warning my-3"> Back </a> --}}
+            </div>
+        </div>
+        {{>footer}}
+    </div>
+</body>
+
+</html>

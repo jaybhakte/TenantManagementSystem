@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacancy Update</title>
+    {{>iconImage}}
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="container">
+        <h3 class="mt-3 text-center">Hey Owner, Please update your room vacancy..!</h3>
+        <form class="mt-4" action="/updatevimage/{{VacancyModel._id}}" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Room Number</label>
+                <input type="number" class="form-control" name="room_number" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" value="{{VacancyModel.room_number}}">
+                {{!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> --}}
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Total Capacity</label>
+                <input type="number" class="form-control" id="exampleInputPassword1" name="room_capacity"
+                    value="{{VacancyModel.room_capacity}}">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Vacancy</label>
+                <input type="number" class="form-control" id="exampleInputPassword2" name="vacancy"
+                    value="{{VacancyModel.vacancy}}">
+            </div>
+            <div class="form-group ">
+                <label class="form-label" for="image">Upload Image</label>
+                <input type="file" id="image" class="form-control" name="vacancyimage"
+                    value="{{VacancyModel.image.data}}">
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Upate</button>
+        </form>
+    </div>
+    {{>footer}}
+</body>
+
+</html>

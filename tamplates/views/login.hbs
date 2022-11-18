@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Login</title>
+    <!-- Bootstrap CSS & icon file-->
+    {{>iconImage}}
+</head>
+
+<body>
+    <div class="container">
+        {{>navbar}}
+
+        <div class="row my-3">
+            <div class="col">
+                <img class="img img-fluid" src="/img/login.png" alt="">
+            </div>
+            <div class="col">
+                <form action="/login" method="POST">
+                    <div class=" form-control form-group my-3">
+                        <label for="inputLEmail">Email address</label>
+                        <input type="email" class="form-control" id="inputLEmail" name="loginEmail" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLPassword">Password</label>
+                        <input type="password" class="form-control" id="inputLPassword" name="loginPassword" placeholder="Password">
+                    </div>
+                    <button type="submit" id="loginBtn" class="btn btn-primary my-3 " >Login</button>
+                </form>
+            </div>
+        </div>
+
+
+
+{{>footer}}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+         <script  src ="/js/index.js"></script>
+</body>
+
+</html>

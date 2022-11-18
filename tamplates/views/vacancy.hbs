@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacancy</title>
+    {{>iconImage}}
+</head>
+
+<body>
+    <div class="container">
+    {{>navbar}}
+        <h3 class="mt-3 text-center">Hey Owner, Please update your room vacancy..!</h3>
+        <form class="mt-4" action="/vacancy" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Room Number</label>
+                <input type="number" class="form-control" placeholder="Enter room number.." name="room_number" id="exampleInputEmail1" aria-describedby="emailHelp">
+                {{!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> --}}
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Total Capacity</label>
+                <input type="number" class="form-control" placeholder="Enter total capacity..." id="exampleInputPassword1" name="room_capacity">
+            </div>
+           <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Vacancy</label>
+                <input type="number" class="form-control" placeholder="Enter vacancys.." id="exampleInputPassword2" name="vacancy">
+            </div>
+             <div class="form-group ">
+                        <label class="form-label" for="image">Upload Image</label>
+                        <input type="file" id="image" class="form-control" name="vacancyimage" value="" required>
+                    </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            <a href="/vacancylist" class="btn btn-primary mt-3">Previous vacancy</a>
+        </form>
+    </div>
+    {{>footer}}
+</body>
+
+</html>
